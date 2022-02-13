@@ -1,0 +1,10 @@
+<details open class="depth-<%= depth %> <%= dependency.dependencies && dependency.dependencies.length > 0 ? 'expandable' : 'non-expandable' %>">
+    <summary><%= dependency.name %> <%= dependency.version %></summary>
+    <% if (dependency.dependencies.length > 0) { %>
+        <div class="dependencies">
+            <% for (let i=0;i<dependency.dependencies.length;i++) { %>
+                <%- include('dependency', { dependency: dependency.dependencies[i], depth: depth+1 }) %>
+            <% } %>
+        </div>
+    <% } %>
+</details>

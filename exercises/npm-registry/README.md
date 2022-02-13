@@ -40,8 +40,8 @@ curl -s http://localhost:3000/package/react/16.13.0 | jq .
 ```
 
 Most of the code is boilerplate; the logic for the `/package` endpoint can be
-found in [src/package.ts](src/package.ts), and some basic tests in
-[test/package.test.ts](test/package.test.ts)
+found in [src/package.ts](src/services/package.ts), and some basic tests in
+[test/package.test.ts](src/services/package.test.ts)
 
 You can run the tests with
 
